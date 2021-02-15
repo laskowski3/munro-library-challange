@@ -1,4 +1,4 @@
-package com.challange.murolibrary.common;
+package com.challange.munrolibrary.common;
 
 public class ParamException extends RuntimeException {
 	private static final long serialVersionUID = -3133955402676449651L;

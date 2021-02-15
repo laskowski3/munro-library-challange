@@ -1,4 +1,4 @@
-package com.challange.murolibrary.common;
+package com.challange.munrolibrary.common;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
