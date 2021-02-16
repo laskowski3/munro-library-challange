@@ -17,3 +17,5 @@ totalNumberOfResults - numeric, natural number expected, throws error if unexpec
 sortingPreference - 'name' or 'height' if both values are provided, then either name or height will be sorting results in preferred order. 
 
 no value means no filter/ sorting applies 
+
+JUnit tests included for core functionality

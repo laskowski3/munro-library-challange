@@ -4,7 +4,7 @@ import com.opencsv.bean.CsvBindByName;
 
 public class MunroLibraryData {
 	@CsvBindByName(column = "Post 1997")
-	private String post1997;
+	private String hillCategory;
 
 	@CsvBindByName(column = "Height (m)")
 	private double height;
@@ -15,12 +15,12 @@ public class MunroLibraryData {
 	@CsvBindByName(column = "Grid Ref")
 	private String gridRef;
 
-	public String getPost1997() {
-		return post1997;
+	public String getHillCategory() {
+		return hillCategory;
 	}
 
-	public void setPost1997(String post1997) {
-		this.post1997 = post1997;
+	public void setHillCategory(String hillCategory) {
+		this.hillCategory = hillCategory;
 	}
 
 	public double getHeight() {

@@ -31,7 +31,7 @@ public class MunroLibraryServiceTests {
 	@Test
 	public final void testCategoryFilterTopSortByNameAsc() throws Exception {
 		List<MunroLibraryData> data = service.readMunroDataFromCSV();
-		data = data.stream().filter(x -> x.getPost1997().equalsIgnoreCase(AppConstants.HILL_TYPE_TOP))
+		data = data.stream().filter(x -> x.getHillCategory().equalsIgnoreCase(AppConstants.HILL_TYPE_TOP))
 				.collect(Collectors.toList());
 		data.sort(Comparator.comparing(MunroLibraryData::getName));
 		List<MunroLibraryData> result = service.processMunroLibraryData(Optional.of(AppConstants.HILL_TYPE_TOP),

@@ -64,8 +64,8 @@ public class MunroLibraryService {
 					.withType(MunroLibraryData.class).build().parse();
 			// always exclude record if hill type is blank
 			munroLibraryData = munroLibraryData.stream()
-					.filter(hill -> !hill.getPost1997().equalsIgnoreCase(AppConstants.EMPTY_STRING)
-							&& hill.getPost1997() != null)
+					.filter(hill -> !hill.getHillCategory().equalsIgnoreCase(AppConstants.EMPTY_STRING)
+							&& hill.getHillCategory() != null)
 					.collect(Collectors.toList());
 		} catch (Exception e) {
 			throw new Exception("Unable to load data from source CSV" + e.getStackTrace());
@@ -116,7 +116,7 @@ public class MunroLibraryService {
 		List<Predicate<MunroLibraryData>> allPredicates = new ArrayList<Predicate<MunroLibraryData>>();
 		if (hillCategory.isPresent())
 			// filter if TOP or MUN provided
-			allPredicates.add(hill -> hill.getPost1997().equalsIgnoreCase(hillCategory.get()));
+			allPredicates.add(hill -> hill.getHillCategory().equalsIgnoreCase(hillCategory.get()));
 
 		if (maxHeightInMeters.isPresent())
 			allPredicates.add(hill -> hill.getHeight() <= Double.parseDouble(maxHeightInMeters.get()));
